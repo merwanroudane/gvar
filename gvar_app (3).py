@@ -287,6 +287,16 @@ header {visibility: hidden;}
 
 /* highlight text */
 .highlight { background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%); padding: 2px 8px; border-radius: 4px; }
+
+/* ── Force all KaTeX / LaTeX blocks to render LTR ── */
+.stLatex, .stLatex > div, .stLatex > div > div {
+    direction: ltr !important;
+    text-align: center !important;
+}
+.katex-display, .katex, .katex * {
+    direction: ltr !important;
+    unicode-bidi: embed !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
